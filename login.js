@@ -10,8 +10,8 @@ loginData = {"username": "admin", "password":"password"}
 //contact flask api below after submit button pressed ( username : admin, password: password) 
 //begin app.js
 const http = require("http");
-const Todo = require("./controller");
-const { getReqData } = require("./utils");
+const Todo = require("./login"); //connect to login api node, post username & password
+const { getReqData } = require("./utils"); //connect to api node which says yes or no back via post; usrname and password match on file
 
 const PORT = process.env.PORT || 5000;
 
@@ -106,19 +106,19 @@ server.listen(PORT, () => {
     console.log(`server started on port: ${PORT}`);
 });
 
-function field_focus(field, email)
+//makes username field blurred
+function field_focus(field, username)
   {
-    if(field.value == email)
+    if(field.value == username)
     {
       field.value = '';
     }
   }
-
-  function field_blur(field, email)
+  function field_blur(field, username)
   {
     if(field.value == '')
     {
-      field.value = email;
+      field.value = username;
     }
   }
 
