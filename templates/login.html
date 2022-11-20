@@ -1,0 +1,26 @@
+<!-- This is a login form -->
+<html>
+
+<link href='login.css' rel='stylesheet'>
+
+<form method="post" action="/login">
+<div class="box">
+<h1>Dashboard</h1>
+
+<input id = "username" type="username" name="username" value="username" onFocus="field_focus(this, 'username');" onblur="field_blur(this, 'username');" class="username" />
+  
+<input id = "password" type="password" name="password" value="password" onFocus="field_focus(this, 'password');" onblur="field_blur(this, 'password');" class="password" />
+  
+<a href="#"><div class="btn">Sign In</div></a> <!-- End Btn -->
+
+<a href="#"><div id="btn2">Sign Up</div></a> <!-- End Btn2 -->
+  
+</div> <!-- End Box -->
+
+</form>
+
+<p>Forgot your password? <u style="color:#f1c40f;">Click Here!</u></p>
+  
+<script src="login.js" type="text/javascript"></script>
+
+</html>
